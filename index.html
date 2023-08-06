@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Tennis Facts</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link href = "style.css" rel = "stylesheet">
+    <script src = "script.js"></script>
+    <link rel="icon" type="image/x-icon" href="Images/ball.jpg">
+</head>
+<body>
+    <audio controls autoplay>
+        <source src="audio/mainmenu.mp3" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <nav class = "flexContainer centerColumn">
+        <div><img src = "images/logo.jpg" alt = "Tennis logo"></div>
+        <button id="navButton">DropDown Menu</button>
+        <div class="navBarLink">
+            <div><a href="#TennisHistory"><h2>History</h2></a></div>
+            <div><a href="#TennisPlayers"><h2>Tennis Players</h2></a></div>
+            <div><a href="#TennisGame"><h2>Tennis Game</h2></a></div>
+        </div>
+    </nav> 
+    <div class="marginYAxis"></div> <!--Add space between parent containers-->
+    <div id="slideShowBox">
+        <div id="sliderContainer" class="sliderContainerTransition">
+            <div class="sliderItem" data-position = "1">
+                <div class = "box flexContainer"><!--Intro Div,, a flexcontainer that holds two flex containers containing another flex column containers-->
+                    <div class= "flexContainerColumn padTextRight">
+                        <div>
+                            <h1 class = "textCenter">Tennis</h1>
+                        </div>
+                        <hr>
+                        <div><h1 class = "textCenter">The World's Game</h1></div>
+                    </div>  
+                    <div>
+                        <div><img src = "images/federer.jpg" alt = "Roger federer"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sliderItem" data-position = "2">
+                <div class = "overwriteBox flexContainer" id="alcarazBg"><!--Intro Div,, a flexcontainer that holds two flex containers containing another flex column containers-->
+                    <div id="alignEnd" class = "flexContainerColumn centerColumn padTextLeft">
+                        <h1>Wimbledon 2023</h1>
+                        <hr>
+                        <h3>The EXCITING Wimbeldon season is here!</h3>
+                        <h3>So get your rackets and tennis balls ready!</h3>
+                        <h3>Check out the latest fixtures!</h3>
+                        <h3>Book match tickets below!</h3>
+                        <form action="https://www.wimbledon.com/" method="get" target="_blank">
+                            <button class="wimbledonButton">Wimbledon Website</button>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+            
+            <div class="sliderItem" data-position = "3">
+                <div class = "overwriteBox flexContainer"><!--Intro Div,, a flexcontainer that holds two flex containers containing another flex column containers-->
+                    <div class= "flexContainerColumn padTextRight">
+                        <div><h1 class = "textCenter">Want to find courts?</h1></div>
+                        <hr>
+                        <div><h3>Click on the dropdown menu!</h3></div>
+                        <button class="wimbledonButton">Tennis court locations</button>
+                        <div class="centerContainer" id="dropdown">
+                            <div class="dropDownContent">
+                                <div class="flexContainer">
+                                    <a class="centerContainer padTextLeft" href="https://tennissg.com/tennis-courts-north-east/" target="_blank"><p>North</p></a>
+                                    <a class="centerContainer padTextRight" href="https://tennissg.com/choa-chu-kang-tennis-centre/" target="_blank"><p>South</p></a>
+                                </div>
+                                <div class="flexContainer">
+                                    <a class="centerContainer padTextLeft" href="https://tennissg.com/tennis-courts-east/" target="_blank"><p>East</p></a>
+                                    <a class="centerContainer padTextRight" href="https://tennissg.com/tennis-courts-west/" target="_blank"><p>West</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="centerContainer"><img src="images/courtslide.png" id = "courtID" alt="Tennis court slide"></div>
+                </div>
+            </div>           
+        </div>
+    </div>
+    <div class="flexContainer"><button id = "moveButton">Next Slide</button></div>
+    <main class = "flexContainerColumn"> <!--Main tag holds all the content besides the navigation bookmark bar-->
+        <div class="marginYAxis"></div> <!--Add space between parent containers-->
+        <!--Origin of tennis-->
+        <section> <!--Children of this section are ordered in flex column containers and each of them have flex row containers to layout content-->
+            <div class = "box flexContainerColumn">
+                <header>
+                    <div><h2 class="textCenter" id="TennisHistory">Origins of Tennis</h2></div>
+                    <div><hr></div>
+                </header>
+                <div class = "flexContainer centerColumn"> <!--Flex row and center column which centers items-->
+                    <div class = "padTextRight">
+                        <p class = "textCenter">
+                            The racket sport traditionally named lawn tennis, invented in Birmingham, England, now commonly known simply as tennis, is the direct descendant of what is now denoted real tennis or royal tennis, which continues to be played today as a separate sport with more complex rules. Most rules of (lawn) tennis derive from this precursor and it is reasonable to see both sports as variations of the same game.
+                            <button class="readMore" data-target="content1">Read more <span>➤</span></button>
+                        </p>
+                        <div class="additionalContent" id="content1">
+                            <h2 class="textCenter">Did you Know?</h2>
+                            <p class="textCenter">Most rules of (lawn) tennis derive from this precursor and it is reasonable to see both sports as variations of the same game.</p>
+                            <p class="textCenter">Tennis is played on various surfaces, including grass, clay, and hard courts, each of which affects the style of play and strategy employed by players.</p>
+                            <p class="textCenter">Tennis tournaments such as the Grand Slam events (Australian Open, French Open, Wimbledon, and US Open) attract players and fans from around the world.</p>
+                        </div>
+                    </div>
+                    <div><img class="onHoverImgZoom" src = "images/oldtennismatch.jpg" alt = "Old tennis match"></div>
+                </div>
+                <div><hr></div>
+                <div class = "flexContainer centerColumn">
+                    <div><img class="onHoverImgZoom" src = "images/maryqueen.jpg" alt = "Mary Queen of Scots"></div>   
+                    <div class="padTextLeft">
+                        <p class = "textCenter">
+                        Many original tennis courts remain, including courts at Oxford, Cambridge, Falkland Palace in Fife where Mary Queen of Scots regularly played, and Hampton Court Palace. Many of the French courts were decommissioned with the terror that accompanied the French Revolution. 
+                        <button class="readMore" data-target="content2">Read more <span>➤</span></button>
+                        </p>
+                        <div class="additionalContent" id="content2">
+                            <h2 class="textCenter">Did you Know?</h2>
+                            <p class="textCenter">Tennis has origins dating back to 12th-century France. The term "tennis" comes from the French word "tenez," which means "take heed" or "receive."</p>
+                            <p class="textCenter">The first known tennis courts were built in monasteries.</p>
+                            <p class="textCenter">The modern form of tennis evolved from "real tennis" or "royal tennis."</p>
+                        </div>
+                    </div>
+                </div>
+                <div><hr></div>
+                <div class = "flexContainer centerColumn">
+                    <div class="padTextRight">
+                        <p class = "textCenter">
+                            The Medieval form of tennis is termed as real tennis, a game that evolved over three centuries from an earlier ball game played around the 12th century in France that involved hitting a ball with a bare hand and later with a glove. By the 16th century the glove had become a racquet, the game had moved to an enclosed playing area and the rules had stabilized. Real tennis spread in popularity throughout royalty in Europe, reaching its peak in the 16th century. 
+                            <button class="readMore" data-target="content3">Read more <span>➤</span></button>
+                        </p>
+                        <div class="additionalContent" id="content3">
+                            <h2 class="textCenter">Did you Know?</h2>
+                            <p class="textCenter">Arthur Ashe became the first African-American male to win a Grand Slam title in 1968.</p>
+                            <p class="textCenter">Billie Jean King defeated Bobby Riggs in the famous "Battle of the Sexes" match in 1973.</p>
+                            <p class="textCenter">Bjorn Borg won six French Open titles and five Wimbledon titles during his career.</p>
+                        </div>
+                    </div>
+                    <div class="padTextLeft"><img class="onHoverImgZoom" src = "images/oldtennisracket.png" alt = "Old tennis racket" ></div>
+                </div>
+                <div><hr></div>
+                <div class = "flexContainer centerColumn" id="bottomSpace">
+                    <div class = "padTextRight"><img class="onHoverImgZoom" id="imageBigger" src = "images/tennistwinbros.png" alt = "Legendary tennis bros"></div>   
+                    <div class="padTextLeft">
+                        <p class = "textCenter">
+                            Tennis in the 1880s was dominated by the remarkable twin brothers William and Ernest Renshaw. William won the Wimbledon singles championship seven times, on three occasions defeating his brother in the final. Ernest was victorious once, and in partnership they won the doubles championship, first played at Oxford in 1879, seven times.
+                            <button class="readMore" data-target="content4">Read more <span>➤</span></button>
+                        </p>
+                        <div class="additionalContent" id="content4">
+                            <h2 class="textCenter">Did you Know?</h2>
+                            <p class="textCenter">Steffi Graf is the only player to achieve a Golden Slam, winning all four majors and the Olympic gold medal in 1988.</p>
+                            <p class="textCenter">Martina Navratilova holds the record for most singles titles at Wimbledon with nine.</p>
+                            <p class="textCenter">Andre Agassi is the only male player to achieve a career Grand Slam and an Olympic gold medal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="marginYAxis"></div> <!--Adding margin to avoid cluttering of boxes-->
+
+
+        <!--Famous tennis players-->
+        <section> <!--All child divs of section are displayed in a flex column manner-->
+            <div class="box flexContainerColumn">
+                <header>
+                    <div><h2 class="textCenter" id="TennisPlayers">Famous Tennis Players</h2></div>
+                    <div><hr></div>
+                </header>
+
+                <div class="flexContainerColumn">
+                    <div class="flexContainer">
+
+                        <div class="basePlayerCard flexContainerColumn onHoverBasePlayerCard"> <!--Base Player Card-->
+                            <div class="centerContainer">
+                                <div>
+                                    <h2>Roger Federer</h2>
+                                    <div>
+                                        <div class="centerContainer"><img class="grayscale" src = "images/federerfamous.jpg" alt="Roger Federer profile card"></div> <!--Left side of player card-->
+                                    </div>
+                                    <button class="readMore" data-target="content5">Read more <span>➤</span></button>
+                                </div>
+
+                                <div class="flexContainer playercard centerXAxis" id="content5"> <!--Player Card // Roger Federer-->
+                                    <div class= "flexContainerColumn"> <!--Right side of player card-->
+                                        <div class="textCenter"><h4>Physical Attributes</h4></div>
+                                        <div class="flexContainer flexRowGap">
+                                            <div class="flexContainerColumn">
+                                                <div class="padTextRight"><p>Height: 6'1</p></div>
+                                                <div class="padTextRight"><p>Birth-Date: 8/8/1981</p></div>
+                                                <div class="padTextRight"><p>Weight: 85kg</p></div>
+                                            </div>
+                                            <div class="flexContainerColumn">
+                                                <div><p>Birthplace: Basel, Switzerland</p></div>
+                                                <div><p>Plays: Right-Hand</p></div>
+                                                <div><p>Residence:  Wollerau, Zurich</p></div>
+                                            </div>
+                                        </div>
+                                        <div><hr></div>
+                                        <button class="readMore" data-target="content6">Read more <span>➤</span></button>
+                                        <div class="additionalContent" id="content6">
+                                            <div class="textCenter"><h4>Career Statistics</h4></div> <!--Career statistics-->
+                                            <div class="flexContainerColumn">
+                                                <div><p>Career record: 1251–275 (82.0% Win rate)</p></div>
+                                                <div><p>Career titles: 103 (2nd in the Open Era)</p></div>
+                                            </div>
+                                            <div><hr></div>
+                                            <div class="textCenter"><h4>Tour Rankings</h4></div> <!--Tour rankings-->
+                                            <div class="flexContainerColumn">
+                                                <div><p>Highest ranking: No. 1 (2 February 2004)</p></div>
+                                                <div><p>Current ranking: Retired</p></div>
+                                            </div>
+                                            <div><hr></div>
+                                            <div class="textCenter"><h4>Grand Slam Career highlights</h4></div> <!--Grand Slam winning yeasr-->
+                                            <div class="flexContainerColumn">
+                                                <div><p>Australian Open W (2004, 2006, 2007, 2010, 2017, 2018)</p></div>
+                                                <div><p>French Open	W (2009)</p></div>  
+                                                <div><p>Wimbledon W (2003, 2004, 2005, 2006, 2007, 2009, 2012, 2017)</p></div>
+                                                <div><p>US Open W (2004, 2005, 2006, 2007, 2008)</p></div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="basePlayerCard flexContainerColumn"> <!--Base Player Card-->
+                            <div>
+                                <div class="centerContainer">
+                                    <h2>Rafa Nadal</h2>
+                                </div>
+                                <div>
+                                    <div class="centerContainer"><img class="grayscale" src = "images/nadal.jpg" alt="Rafa Nadal profile card"></div>  <!--Left side of player card-->
+                                </div>
+                                <button class="readMore" data-target="content7">Read more <span>➤</span></button>
+                            </div>
+
+                            <div class="flexContainer playercard centerXAxis" id="content7"> <!--Player Card // Rafa Nadal-->
+                                <div class= "flexContainerColumn"> <!--Right side of player card-->
+                                    <div class="textCenter"><h4>Physical Attributes</h4></div>
+                                    <div class="flexContainer flexRowGap">
+                                        <div class="flexContainerColumn">
+                                            <div class="padTextRight"><p>Height: 6'1</p></div>
+                                            <div class="padTextRight"><p>Birth-Date: 3/6/1986</p></div>
+                                            <div class="padTextRight"><p>Weight: 85kg</p></div>
+                                        </div>
+                                        <div class="flexContainerColumn">
+                                            <div><p>Birthplace: Spain</p></div>
+                                            <div><p>Plays: Left-Hand</p></div>
+                                            <div><p>Residence: Manacor, Mallorca, Spain</p></div>
+                                        </div>
+                                    </div>
+                                    <div><hr></div>
+                                    <button class="readMore" data-target="content8">Read more <span>➤</span></button>
+                                    <div class="additionalContent" id="content8">
+                                        <div><h4>Career Statistics</h4></div> <!--Career statistics-->
+                                        <div class="flexContainerColumn">
+                                            <div><p>Career record:1068–220 (82.9% Win rate)</p></div>
+                                            <div><p>Career titles: 92 (5th in the Open Era)</p></div>
+                                        </div>
+                                        <div><hr></div>
+                                        <div><h4>Tour Rankings</h4></div> <!--Tour rankings-->
+                                        <div class="flexContainerColumn ">
+                                            <div><p>Highest ranking: No. 1 (18 August 2008)</p></div>
+                                            <div><p>Current ranking: No. 140 (17 July 2023)</p></div>
+                                        </div>
+                                        <div><hr></div>
+                                        <div><h4>Grand Slam Career highlights</h4></div> <!--Grand Slam winning yeasr-->
+                                        <div class="flexContainerColumn">
+                                            <div><p>Australian Open	W (2009, 2022)</p></div>
+                                            <div><p>French Open	W (2005, 2006, 2007, 2008, 2010, 2011, 2012, 2013, 2014, 2017, 2018, 2019, 2020, 2022)</p></div>  
+                                            <div><p>Wimbledon	W (2008, 2010)</p></div>
+                                            <div><p>US Open	W (2010, 2013, 2017, 2019)</p></div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="flexContainer">
+                        <div class="basePlayerCard flexContainerColumn"> <!--Base Player Card-->
+                            <div>
+                                <div class="centerContainer">
+                                    <h2>Novak Djokovic</h2>
+                                </div>
+                                <div>
+                                    <div class="centerContainer"><img class="grayscale" src = "images/djokovic.png" alt="Novak Djokovic profile card"></div>  <!--Left side of player card-->
+                                </div>
+                                <button class="readMore" data-target="content9">Read more <span>➤</span></button>
+                            </div>
+
+                            <div class="flexContainer playercard centerXAxis" id="content9"> <!--Player Card // Novak Djokovic-->
+                                <div class= "flexContainerColumn"> <!--Right side of player card-->
+                                    <div class="textCenter"><h4>Physical Attributes</h4></div> 
+                                    <div class="flexContainer flexRowGap"> <!--Physical attributes in a flex container that contains 2 flex column-->
+                                        <div class="flexContainerColumn">
+                                            <div class="padTextRight"><p>Height: 6'2</p></div>
+                                            <div class="padTextRight"><p>Birth-Date: 22/5/1987</p></div>
+                                            <div class="padTextRight"><p>Weight: 77kg</p></div>
+                                        </div>
+                                        <div class="flexContainerColumn">
+                                            <div><p>Birthplace: Serbia</p></div>
+                                            <div><p>Plays: Right-Hand</p></div>
+                                            <div><p>Residence:	Belgrade, Serbia</p></div>
+                                        </div>
+                                    </div>
+                                    <div><hr></div>
+                                    <button class="readMore" data-target="content10">Read more <span>➤</span></button>
+                                    <div class="additionalContent" id="content10">
+                                        <div><h4>Career Statistics</h4></div> <!--Career statistics-->
+                                        <div class="flexContainerColumn"> <!--Career statistics in a flex column container-->
+                                            <div><p>Career record: 1064–211 (83.5% Win rate)</p></div>
+                                            <div><p>Career titles: 92 (5th in the Open Era)</p></div>
+                                        </div>
+                                        <div><hr></div>
+                                        <div><h4>Tour Rankings</h4></div> <!--Tour rankings-->
+                                        <div class="flexContainerColumn "> <!--Tour rankings are in a flex column container-->
+                                            <div><p>Highest ranking: No. 1 (18 August 2008)</p></div>
+                                            <div><p>Current ranking: No. 2 (26 June 2023)</p></div>
+                                        </div>
+                                        <div><hr></div>
+                                        <div><h4>Grand Slam Career highlights</h4></div> <!--Grand Slam winning yeasr-->
+                                        <div class="flexContainerColumn"> <!--Grand slam winnings are in a flex column container-->
+                                            <div><p>Australian Open	W (2008, 2011, 2012, 2013, 2015, 2016, 2019, 2020, 2021, 2023)</p></div>
+                                            <div><p>French Open	W (2016, 2021, 2023)</p></div>  
+                                            <div><p>Wimbledon	W (2011, 2014, 2015, 2018, 2019, 2021, 2022)</p></div>
+                                            <div><p>US Open	W (2011, 2015, 2018)</p></div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+    
+                        <div class="basePlayerCard flexContainerColumn"> <!--Base Player Card-->
+                            <div>
+                                <div class="centerContainer">
+                                    <h2>Nick Kygrios</h2>
+                                </div>
+                                <div>
+                                    <div  class="centerContainer"><img class="grayscale" src = "images/kygrios.png" alt="Nick Kygrios profile card"></div>  <!--Left side of player card-->
+                                </div>
+                                <button class="readMore" data-target="content11">Read more <span>➤</span></button>
+                            </div>
+
+                            <div class="flexContainer playercard centerXAxis" id="content11"> <!--Player Card // Roger Federer-->
+                                <div class= "flexContainerColumn"> <!--Right side of player card-->
+                                    <div class="textCenter"><h4>Physical Attributes</h4></div>
+                                    <div class="flexContainer flexRowGap">
+                                        <div class="flexContainerColumn">
+                                            <div class="padTextRight"><p>Height: 6'4</p></div>
+                                            <div class="padTextRight"><p>Birth-Date: 27/4/1995</p></div>
+                                            <div class="padTextRight"><p>Weight: 85kg</p></div>
+                                        </div>
+                                        <div class="flexContainerColumn">
+                                            <div><p>Birthplace: Canberra, ACT, Australiad</p></div>
+                                            <div><p>Plays: Right-Hand</p></div>
+                                            <div><p>Residence:  Sydney, New South Wales</p></div>
+                                        </div>
+                                    </div>  
+                                    <div><hr></div>
+                                    <button class="readMore" data-target="content12">Read more <span>➤</span></button>
+                                    <div class="additionalContent" id="content12">
+                                        <div class="textCenter"><h4>Career Statistics</h4></div> <!--Career statistics-->
+                                        <div class="flexContainerColumn">
+                                            <div><p>Career record: 	205–114 (64.3% Win Rate)</p></div>
+                                            <div><p>Career titles: 7</p></div>
+                                        </div>
+                                        <div><hr></div>
+                                        <div class="textCenter"><h4>Tour Rankings</h4></div> <!--Tour rankings-->
+                                        <div class="flexContainerColumn">
+                                            <div><p>Highest ranking: No. 13 (24 October 2016)</p></div>
+                                            <div><p>Current ranking: No. 35</p></div>
+                                        </div>
+                                        <div><hr></div>
+                                        <div class="textCenter"><h4>Grand Slam Career highlights</h4></div> <!--Grand Slam winning yeasr-->
+                                        <div class="flexContainerColumn">
+                                            <div><p>Australian Open	QF (2015)</p></div>
+                                            <div><p>French Open	3R (2015, 2016)</p></div>  
+                                            <div><p>WimbledonF (2022)</p></div>
+                                            <div><p>US Open	QF (2022)</p></div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="marginYAxis"></div>  <!--Adding margin at bottom to make it webpage more spacious-->
+            </div>
+        </section>
+        <div class="marginYAxis"></div>
+        <!--Tennis game-->
+        <div class="box flexContainerColumn">
+            <header>
+                <div><h2 class="textCenter" id="TennisGame">Simple Tennis/Ball Game</h2></div>
+                <div><hr></div>
+            </header>
+            <div class="centerContainer">
+                <p>Control the left player by using UP and DOWN arrow keys</p>
+            </div>
+            <div class="centerContainer">
+                <p>Win the number of points to progress at the top of the level before the opponent to progress to next level!</p>
+            </div>
+            <div class="centerContainer">
+                <canvas width = "100"></canvas>
+            </div>
+            <div class="marginYAxis"></div>  <!--Adding margin at bottom to make it webpage more spacious-->
+        </div>
+        <div class="textCenter"><h1>QRCODE</h1></div>
+        <div class="textCenter"><img src="images/qrcode.png" alt="qrcode"></div>
+    </main>
+</body>
+</html> 

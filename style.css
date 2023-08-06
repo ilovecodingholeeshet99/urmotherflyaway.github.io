@@ -1,0 +1,141 @@
+/*Selectors */
+*{ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif }
+html{scroll-behavior: smooth; animation: start; animation-duration: 4s;}
+body{background-image: url("images/background.jpg"); overflow-x: hidden;}
+h1{ font-size: 6.167vw; }
+h2{ font-size: 3.583vw;}
+h3{font-size: 2.03vw; color: turquoise;}
+h4{font-size: 1.7vw}
+p{ font-size: 1.5vw;}
+img{ width: fit-content; height: fit-content;} 
+hr {width: 95%; height: 0.417vw; background-color: black; }
+button{border: none; background: none;}
+a{text-decoration: none;}
+canvas{width: 2.208vw; height: 2.208vw;}
+
+/*combination selectors */
+section > div > div {padding-top: 100px;}
+nav h2 {animation-name: glow; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: reverse}
+.additionalContent > p {animation: bounce 1s infinite; animation-delay: calc(0.1s * var(--i)); animation: start 1s;}
+
+
+/*Keyframes*/
+@keyframes loading {
+    from { transform: rotate(0turn);} 
+    from { transform: rotate(1turn);} 
+}
+@keyframes fade { from {opacity: 0.4}to {opacity: 1}}
+@keyframes glow{
+    from{text-shadow:0px 0px 5px #fff,0px 0px 5px #614ad3;}
+    to{text-shadow:0px 0px 20px #fff,0px 0px 20px #614ad3;}}
+@keyframes start
+{
+    from{max-height:0; max-width: 0; opacity: 0;}
+    to{max-height: 100vh; max-width: 100vw; opacity: 100%;}
+}
+    
+    
+/*Transitions */
+.wimbledonButton:active{box-shadow: 0 10px blue;transform: translateY(5px);}
+.basePlayerCard:hover .additionalContent {display: block;}
+#navButton:hover{background-color: white;}
+.onHoverImgZoom:hover{transform: scale(1.3);}
+#navButton:hover{background-color: white;}
+
+
+/*Classes*/
+.onHoverImgZoom{transition: transform 0.3s ease-in-out;}
+.centerContainer{align-self: center;}
+.flexContainer {align-content: center;}
+.flexContainerColumn{flex-direction: column;}
+.playercard{border-radius: 25px; background-color: rgb(187, 20, 20); width: 90%; gap: 0.2vw;}
+.padTextRight {padding-left: 5.208vw;}
+.padTextLeft{padding-right: 5.208vw;}
+.marginYAxis {margin-top: 3.842vw}
+.grayscale{filter: grayscale(100%);}
+.fade{animation-name: fade; animation-duration: 1.5s;}
+.sliderContainerTransition{transition: 0.7s ease-in-out;}
+.sliderItem{width: 100%; flex-shrink: 0; overflow: hidden; cursor: pointer;}
+.wimbledonButton{border: 1px solid black; font-size: 35px; background-color: rgb(255, 0, 0); }
+.dropDownContent{color: pink; font-size: 19.2px; width: 100px; border-radius: 25px; cursor: pointer;}
+.menuDropDown{width: 10rem; height: 1.8rem; font-size: 1.5rem; background-color: aqua; color: black;  border: 2px solid yellow;
+    border-radius: 10px; padding: 2px 5px;}
+.overwriteBox{height: 54vw;}
+.additionalContent{border: 1px solid #ccc; position: relative;}
+.readMore{background: none; font: inherit; outline: none;}
+.basePlayerCard{border-radius: 25px; width: fit-content; padding: 1.563vw;}
+
+/* ID */
+#navButton{display: none;}
+#dropdown{position: relative; display: inline-block;}
+#imageBigger{width: 34.250vw; height: 23.833vw;}
+#alignTextStart{align-items: flex-start;}
+#nadalbgcolor{background-color: rgb(204, 138, 16);} 
+#djokovicbgcolor{background-color: rgb(51, 51, 198)}
+#alcarazBg{background: green url(images/alcaraz.png) no-repeat;}
+#slideShowBox{overflow: hidden;}
+#sliderContainer{flex-wrap: nowrap;}
+#moveButton{font-size: 5vw;}
+#alignEnd{margin-left: auto;}
+
+
+/*Group Selectors*/
+.spaceBetween, .hamburger{justify-content: space-between;}
+#bottomSpace, .playercard{padding-bottom: 2.604vw;}
+.textCenter, .menuDropDown {text-align: center;}
+.menuDropDown, .flexContainer{justify-content: center;}
+.readMore, .basePlayerCard, .menuDropDown{cursor: pointer;}
+.wimbledonButton:active, .wimbledon:hover{background-color: blue}
+p, h4 {color:  rgb(248, 171, 194);}
+h1, h2, .readMore{color: rgb(75, 195, 235);}
+.flexContainer, .flexContainerColumn, #sliderContainer, .loader, footer{display: flex;}
+.centerXAxis, .box, nav, .overwriteBox{margin: auto;}
+nav, .flexRowGap{gap: 4.604vw;}
+nav, .box{height: auto;}
+nav, .box, .overwriteBox, footer{width: 90%;}
+nav, .box, .overwriteBox, .additionalContent, canvas{border: 10px solid black;}
+button:hover, nav, .box, .overwriteBox, #game-container{background-color: green;}
+.dropDownContent, .additionalContent, .playercard{display: none;}
+.centerColumn {align-items: center;}
+
+/*Responsive*/
+@media only screen and (max-width: 800px) /*below 800px*/
+{
+    nav 
+    {
+        flex-direction: column;
+    }
+    h2 
+    {
+        font-size: 5.5vw;
+    }
+    h4 
+    {
+        font-size: 3.3vw;
+    }
+    p
+    {
+        font-size: 4.5vw;
+    }
+    .flexContainer
+    {   
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .centerContainer
+    {
+        flex-direction: column;
+    }
+    .readMore
+    {
+        font-size: 3.5vw;
+    }
+    canvas
+    {
+        width: fit-content;
+    }
+    .overwriteBox
+    {
+        flex-direction: column;
+    }
+}
